@@ -1,0 +1,28 @@
+JokeGenerator:
+Basic Api fetch method syntax:
+fetch("API_URL")
+    .then(response => response.json())  // Convert response to JSON
+    .then(data => console.log(data))     // Use the data received
+    .catch(error => console.error("Error:", error)); // Handle errors
+API (Application Programming Interface):
+It used to retrieve or fetch data/info from external resources.
+ 
+  const  fetchApi=()=>{
+        fetch("https://sv443.net/jokeapi/v2/joke/Programming?type=single")
+       .then((res)=>res.json())
+       .then((data)=>setjoke(data.joke))
+    }
+
+Fetch used to retrieve data from API
+.then((res)=>res.json()) used to convert the response data into Json format
+//here we can use res/response 
+.then((data)=>setjoke(data.joke)) used to fetch joke value from data object
+.then((data)=>setjoke(data.joke)) updating the joke value as a Api response value.
+ <Button callApi={fetchApi} /> paasing fetchapi function as props to button
+
+Key Learnings:
+Api data fetching and converting raw data to json format and fetching required value using object key value.
+
+
+
+
